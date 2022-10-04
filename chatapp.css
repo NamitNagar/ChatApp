@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -6,30 +8,15 @@
 
 
 #main-container{
-    width: 99.5%;
-    height: 99vh;
-    background: hsla(186, 33%, 94%, 1);
-    background: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
-    background: -moz-linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
-    background: -webkit-linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EBF4F5", endColorstr="#B5C6E0", GradientType=1 );
+    width: 99.85%;
+    height: 99.6vh;
+    background: hsla(233, 100%, 90%, 1);
+    background: linear-gradient(90deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
+     background: -webkit-linear-gradient(90deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CAD0FF", endColorstr="#E3E3E3",GradientType=1 );
     border: 1px solid black;
     margin:0;
 }
-#recipent-container{
-    border: 1.5px solid black;
-    border-top:0px solid black;
-    border-bottom:1.5px solid black;
-    width: 32%;
-    height: 92.8%;  
-    border-radius: 0px;
-    background-color: #fff;
-}
 
-#header-nav-bar{
-    width:100%;
-   background: #C7F9CC;
-    height: 7%;
-    border-bottom: 1px solid black;
 
-}
