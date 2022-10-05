@@ -19,4 +19,14 @@
     margin:0;
 }
 
+#recipent-profile{
+    width: 150px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.recipent-message{
+   display: flex;
+   justify-content: flex-start;
+    width: 40vw;
+    margin-left: 4vw;
+}
