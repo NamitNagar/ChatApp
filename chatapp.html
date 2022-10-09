@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="chatapp.css" />
-    
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -38,9 +38,9 @@
               </a>
             </li>
           </ul>
-          <a class="navbar-brand">Namit Nagar</a>
+          <a class="navbar-brand">Dhruv Dhing</a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="settings">
                   <svg
@@ -110,49 +110,50 @@
                 </a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-primary" type="submit">Search</button>
-            </form>
+            <div id="signup-option-div" class="text-2xl underline decoration-2">
+              <ul>
+              <li class="nav-item">
+                <a class="nav-link" href="signup">
+                <p class="">Sign Out</p>
+                </a>
+              </li>
+            </ul>
+            </div>
           </div>
         </div>
       </nav>
 
       <div id="chat-area">
-        <div id="recipent-container">
+        <div id="recipent-container" class="bg-zinc-200">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control w-2/3 mt-2 mb-2 ml-auto"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-primary h-1/3 mt-2.5 mr-auto ml-2"
+              id="search-btn"
+              type="submit"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+            </button>
+          </form>
+
           <ul class="list-group">
             <li
-              class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto w-full" onclick="openChat()">
-                <div
-                  class="fw-bold d-flex justify-content-evenly align-items-center align-content-between"
-                  id="recipent-profile"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    fill="gray"
-                    class="bi bi-person-circle"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                    <path
-                      fill-rule="evenodd"
-                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
-                    />
-                  </svg>
-                  Ajey Nagar
-                </div>
-              </div>
-              <span class="badge bg-primary rounded-pill">1</span>
-            </li>
-            <li
               class="list-group-item d-flex justify-content-between align-items-start"
               onclick="openChat()"
             >
@@ -264,13 +265,74 @@
               </div>
               <span class="badge bg-primary rounded-pill">1</span>
             </li>
-            
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+              onclick="openChat()"
+            >
+              <div class="ms-2 me-auto w-full">
+                <div
+                  class="fw-bold d-flex justify-content-evenly align-items-center align-content-between"
+                  id="recipent-profile"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="gray"
+                    class="bi bi-person-circle"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path
+                      fill-rule="evenodd"
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                    />
+                  </svg>
+                  Ajey Nagar
+                </div>
+              </div>
+              <span class="badge bg-primary rounded-pill">1</span>
+            </li>
           </ul>
         </div>
 
-        <div id="chat-container">
-          <footer>
-            <input type="text" />
+        <div id="chat-container" class="bg-zinc-600">
+          <footer
+            id="chat-footer"
+            class="bg-zinc-900 border-solid border-2 border-zinc-900 d-flex justify-evenly"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              fill="white"
+              class="bi bi-emoji-smile-fill"
+              id="chat-emoji-icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"
+              />
+            </svg>
+            <input
+              type="text"
+              class="bg-zinc-900"
+              id="chat-input"
+              placeholder="Type a message..."
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              fill="white"
+              class="bi bi-send-fill"
+              id="chat-send-icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"
+              />
+            </svg>
           </footer>
         </div>
       </div>
@@ -280,6 +342,6 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <link rel="script" href="chatapp.js"/>
+    <script src="chatapp.js"></script>
   </body>
 </html>
