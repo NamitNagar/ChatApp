@@ -1,6 +1,6 @@
 var recipentContainer = document.getElementById("recipent-container");
 var chatContainer = document.getElementById("chat-container");
+var chatFooter = document.getElementById("chat-footer");
 function openChat(){
-    recipentContainer.style.width = "20px";
-    chatContainer.style.display = "flex";
+chatFooter.style.visibility = "visible";
 }
